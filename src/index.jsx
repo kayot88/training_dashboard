@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtoolsPanel } from "react-query/devtools";
-
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
+import { GlobalStyles } from "./globalStyles";
+
 
 const queryClient = new QueryClient();
 
@@ -13,8 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <QueryClientProvider client={queryClient}>
+        <GlobalStyles />
         <App />
-        <ReactQueryDevtoolsPanel initialIsOpen={false} position="top-right" />
+        {/* <ReactQueryDevtoolsPanel initialIsOpen={false} position="top-right" /> */}
       </QueryClientProvider>
     </Router>
   </React.StrictMode>,
