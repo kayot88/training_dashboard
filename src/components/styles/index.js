@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 import { keyframes } from "styled-components";
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,6 +102,13 @@ export const Input = styled.input`
 `;
 export const Button = styled.input`
   margin-top: 20px;
+  transition:  transform 1s;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    background: #666;
+    transform: scale(1.1);
+  }
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 20px;
@@ -142,7 +149,6 @@ const animate = keyframes`
     transform: translateY(-40px);
   }
   `;
-
 
 const rotate = keyframes`
   from {

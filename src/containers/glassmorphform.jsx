@@ -20,6 +20,26 @@ import {
 } from "../components/styles";
 import { FormContainer } from "./../components/styles/index";
 
+const handleClick = (e) => {
+  e.preventDefault();
+  return alert("It`a another story!");
+};
+
+const validateUtil = (values) => {
+  const errors = {};
+  if (!values.email) {
+    errors.email = "Required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+    errors.email = "Invalid email address";
+  }
+  if (!values.password) {
+    errors.password = "Required";
+  } else if (!values.password) {
+    errors.password = "Required";
+  }
+  return errors;
+};
+
 const glassmorphform = () => {
   return (
     <div>
@@ -36,27 +56,66 @@ const glassmorphform = () => {
             <Square5 />
 
             <FeatureContainer>
-              <Formik>
-                <FormContainer>
-                  <FormTitle>Login form</FormTitle>
-                  <Input
-                    type="text"
-                    placeholder="enter email"
-                    autocomplete="off"
-                  />
-                  <Input
-                    type="password"
-                    placeholder="enter password"
-                    autocomplete="off"
-                  />
-                  <Button type="submit" value="Login" />
-                  <Forget>
-                    Forgot Password ? <StyledLink>Click Here</StyledLink>
-                  </Forget>
-                  <Forget>
-                    Don`t have an account ? <StyledLink>Sign Up</StyledLink>
-                  </Forget>
-                </FormContainer>
+              <Formik
+                initialValues={{ email: "", password: "" }}
+                onSubmit={(values, { setSubmitting }) => {
+                  setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                  }, 400);
+                }}
+                validate={validateUtil}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting,
+                }) => (
+                  <FormContainer onSubmit={handleSubmit}>
+                    <FormTitle>Login form</FormTitle>
+                    <Input
+                      type="email"
+                      name="email"
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="enter email"
+                      autocomplete="off"
+                    />
+                    {errors.email && touched.email && errors.email}
+                    <Input
+                      type="password"
+                      name="password"
+                      value={values.password}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="enter password"
+                      autocomplete="off"
+                    />
+                    {errors.password && touched.password && errors.password}
+                    <Button
+                      type="submit"
+                      value="Login"
+                      disabled={isSubmitting}
+                    />
+                    <Forget>
+                      Forgot Password ?{" "}
+                      <StyledLink onClick={handleClick} to="/">
+                        Click Here
+                      </StyledLink>
+                    </Forget>
+                    <Forget>
+                      Don`t have an account ?{" "}
+                      <StyledLink onClick={handleClick} to="/">
+                        Sign Up
+                      </StyledLink>
+                    </Forget>
+                  </FormContainer>
+                )}
               </Formik>
             </FeatureContainer>
           </div>
