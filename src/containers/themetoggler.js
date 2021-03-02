@@ -19,6 +19,9 @@ const themetoggler = () => {
           />
         ))}
         <ThemeToggler.Moon />
+        <ThemeToggler.Cloud1 src={`/images/ThemeTogglerImage/cloud1.png`} />
+        <ThemeToggler.Cloud2 src={`/images/ThemeTogglerImage/cloud2.png`} />
+        <ThemeToggler.Cloud3 src={`/images/ThemeTogglerImage/cloud3.png`} />
         <div>
           <ThemeToggler.ImageForest
             src={`/images/ThemeTogglerImage/forest.png`}

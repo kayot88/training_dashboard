@@ -28,7 +28,7 @@ export const Moon = styled.div`
   height: 100px;
   border-radius: 50%;
   background: white;
-  /* transition: 0.5s; */
+  transition: 0.5s;
   &:before {
     content: "";
     position: absolute;
@@ -68,4 +68,41 @@ export const Star = styled.i`
   animation: ${animate} linear infinite;
   animation-duration: ${(props) => props.animationDuration};
   animation-delay: ${(props) => props.animationDelay};
+`;
+
+const cloudAnimation = keyframes`
+  0% {
+    transform: translateX(-100%) scale(1);
+
+  }
+  100% {
+    transform: translateX(400%) scale(1.5);
+  }
+  `;
+
+export const Cloud1 = styled.img`
+  position: absolute;
+  max-width: 600px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: ${cloudAnimation} 50s linear infinite;
+`;
+export const Cloud2 = styled.img`
+  position: absolute;
+  max-width: 300px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: ${cloudAnimation} 35s linear infinite;
+  animation-delay: -25s;
+`;
+export const Cloud3 = styled.img`
+  position: absolute;
+  max-width: 400px;
+  top: 75px;
+  left: 0;
+  z-index: 2;
+  animation: ${cloudAnimation} 30s linear infinite;
+  animation-delay: -10s;
 `;
