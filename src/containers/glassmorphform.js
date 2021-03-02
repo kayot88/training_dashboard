@@ -1,7 +1,8 @@
 import { Formik } from "formik";
 import React from "react";
-import { GlassmorphForm } from "../components/GlassComp";
+import { GlassmorphForm } from "../components/glassForm/GlassComp";
 import {
+  FormContainer,
   FeatureContainer,
   Color,
   Color2,
@@ -16,9 +17,7 @@ import {
   Square3,
   Square4,
   Square5,
-  // Square4,
-} from "../components/styles";
-import { FormContainer } from "./../components/styles/index";
+} from "../components/glassForm/styles";
 
 const handleClick = (e) => {
   e.preventDefault();
@@ -126,3 +125,5 @@ const glassmorphform = () => {
 };
 
 export default glassmorphform;
+
+

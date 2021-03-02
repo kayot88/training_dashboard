@@ -24,11 +24,13 @@ const CssTricks = () => {
   const { url, path } = useRouteMatch();
   console.log(url, path);
   return (
-    
     <div>
       <ul>
         <li>
           <Link to={`${url}/glassmorphform`}>GlassmorhForm</Link>
+        </li>
+        <li>
+          <Link to={`${url}/themetoggler`}>ThemeToggler</Link>
         </li>
       </ul>
 
