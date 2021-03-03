@@ -6,6 +6,7 @@ import {
   Cloud1,
   Cloud2,
   Cloud3,
+  Bg,
 } from "./styles/index";
 
 export function ThemeToggler({ children, ...rest }) {
@@ -14,6 +15,9 @@ export function ThemeToggler({ children, ...rest }) {
 
 ThemeToggler.ImageForest = ({ ...rest }) => {
   return <ImageForest {...rest} />;
+};
+ThemeToggler.Bg = ({ ...rest }) => {
+  return <Bg {...rest} />;
 };
 
 ThemeToggler.Moon = ({ ...rest }) => {
