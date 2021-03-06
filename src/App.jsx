@@ -11,7 +11,7 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/csstricks">
+      <Route path="/reacton">
         <CssTricks />
       </Route>
       <Route path="/coolfeatures">

@@ -41,7 +41,7 @@ const validateUtil = (values) => {
 
 const glassmorphform = () => {
   return (
-    <div>
+    <div style={{ overflow: "hidden", maxHeight: "100vh" }}>
       <GlassmorphForm>
         <GlassmorphForm.Section>
           <Color />
@@ -125,5 +125,3 @@ const glassmorphform = () => {
 };
 
 export default glassmorphform;
-
-

@@ -1,4 +1,4 @@
-
+import React from 'react'
 import styled from "styled-components";
 import { Container, Section } from './styles/index';
 

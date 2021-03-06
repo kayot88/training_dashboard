@@ -9,11 +9,9 @@ var _formik = require("formik");
 
 var _react = _interopRequireDefault(require("react"));
 
-var _GlassComp = require("../components/GlassComp");
+var _GlassComp = require("../components/glassForm/GlassComp");
 
-var _styles = require("../components/styles");
-
-var _index = require("../components/styles/index");
+var _styles = require("../components/glassForm/styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66,7 +64,7 @@ var glassmorphform = function glassmorphform() {
         handleBlur = _ref2.handleBlur,
         handleSubmit = _ref2.handleSubmit,
         isSubmitting = _ref2.isSubmitting;
-    return /*#__PURE__*/_react.default.createElement(_index.FormContainer, {
+    return /*#__PURE__*/_react.default.createElement(_styles.FormContainer, {
       onSubmit: handleSubmit
     }, /*#__PURE__*/_react.default.createElement(_styles.FormTitle, null, "Login form"), /*#__PURE__*/_react.default.createElement(_styles.Input, {
       type: "email",

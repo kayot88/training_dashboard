@@ -11,11 +11,11 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/jest": "^26.0.20",
+    "@use-it/interval": "^1.0.0",
     "formik": "^2.2.6",
+    "gsap": "^3.6.0",
+    "json-server": "^0.16.3",
     "react": "^17.0.1",
     "react-animations": "^1.0.0",
     "react-dom": "^17.0.1",
@@ -53,16 +53,12 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/react@1.0.30"
+      "compiler": "bit.envs/compilers/react@1.0.21"
     },
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm",
-    "src/*": {
-      "peerDependencies": {
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "styled-components": "^5.2.1"
-      }
-    }
+    "packageManager": "npm"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.7"
   }
 }

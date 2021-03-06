@@ -32,6 +32,9 @@ const CssTricks = () => {
         <li>
           <Link to={`${url}/themetoggler`}>ThemeToggler</Link>
         </li>
+        <li>
+          <Link to={`${url}/tonistark`}>ToniStark GAP</Link>
+        </li>
       </ul>
 
       <button onClick={() => goBackFunction()}>Go back</button>

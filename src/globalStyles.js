@@ -12,7 +12,7 @@ html, body  {
 };
 
 body{
-  overflow: hidden;
+ /* overflow: hidden; */
 }
 `;
 

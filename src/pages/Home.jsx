@@ -8,7 +8,7 @@ const Home = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/csstricks">CSS TRICKS</Link>
+            <Link to="/reacton">REACToN</Link>
           </li>
           <li>
             <Link to="/coolfeatures">COOL FEATURES</Link>
