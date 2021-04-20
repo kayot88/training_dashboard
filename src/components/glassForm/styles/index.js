@@ -128,7 +128,7 @@ export const Button = styled.input`
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   font-weight: 600;
   color: #333;
 `;

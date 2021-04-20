@@ -4,7 +4,7 @@ import {
   Route,
   useHistory,
   useParams,
-  useRouteMatch
+  useRouteMatch,
 } from "react-router-dom";
 
 const Hook = () => {
@@ -31,6 +31,9 @@ const Hooks = () => {
         <li>
           <Link to={`${url}/usememo`}>useMemoHook</Link>
         </li>
+        <li>
+          <Link to={`${url}/dnd`}>DragAndDrop</Link>
+        </li>
       </ul>
 
       <button onClick={() => goBackFunction()}>Go back</button>
@@ -42,4 +45,4 @@ const Hooks = () => {
   );
 };
 
-export default Hooks
+export default Hooks;

@@ -39,7 +39,12 @@ var validateUtil = function validateUtil(values) {
 };
 
 var glassmorphform = function glassmorphform() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_GlassComp.GlassmorphForm, null, /*#__PURE__*/_react.default.createElement(_GlassComp.GlassmorphForm.Section, null, /*#__PURE__*/_react.default.createElement(_styles.Color, null), /*#__PURE__*/_react.default.createElement(_styles.Color2, null), /*#__PURE__*/_react.default.createElement(_styles.Color3, null), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      overflow: "hidden",
+      maxHeight: "100vh"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_GlassComp.GlassmorphForm, null, /*#__PURE__*/_react.default.createElement(_GlassComp.GlassmorphForm.Section, null, /*#__PURE__*/_react.default.createElement(_styles.Color, null), /*#__PURE__*/_react.default.createElement(_styles.Color2, null), /*#__PURE__*/_react.default.createElement(_styles.Color3, null), /*#__PURE__*/_react.default.createElement("div", {
     style: {
       position: "relative"
     }
